@@ -21,7 +21,7 @@ switch_branches() {
   fi
   if [ -n "$(git branch --list $1)" ]; then
     git checkout $1
-    git pull $REMOTE $1
+    git pull $REMOTE $1 --ff-only
   else
     git fetch $REMOTE $1
     git checkout -b $1 $REMOTE/$1
@@ -85,13 +85,13 @@ switch_branches $BRANCH1 libcore
 switch_branches $BRANCH1 packages/apps/Jelly
 switch_branches $BRANCH1 packages/apps/LineageParts
 switch_branches $BRANCH1 packages/apps/Settings
-#switch_branches $BRANCH1 packages/apps/Trebuchet
+switch_branches $BRANCH1 packages/apps/Trebuchet
 #switch_branches $BRANCH1 packages/modules/Connectivity
 switch_branches $BRANCH1 packages/modules/DnsResolver
 #switch_branches $BRANCH1 packages/modules/NetworkStack
 switch_branches $BRANCH1 packages/modules/Permission
 switch_branches $BRANCH1 packages/modules/Wifi
-#switch_branches $BRANCH1 packages/providers/MediaProvider
+switch_branches $BRANCH1 packages/providers/MediaProvider
 switch_branches $BRANCH1 system/core
 switch_branches $BRANCH1 system/sepolicy
 switch_branches $BRANCH1 vendor/lineage
