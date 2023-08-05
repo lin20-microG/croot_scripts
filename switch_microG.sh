@@ -82,20 +82,22 @@ switch_branches $BRANCH1 build/soong
 switch_branches $BRANCH1 frameworks/base
 switch_branches $BRANCH1 frameworks/native
 switch_branches $BRANCH1 libcore
+switch_branches $BRANCH1 packages/apps/Contacts
+switch_branches $BRANCH1 packages/apps/DocumentsUI
 switch_branches $BRANCH1 packages/apps/Jelly
 switch_branches $BRANCH1 packages/apps/LineageParts
 switch_branches $BRANCH1 packages/apps/Settings
 switch_branches $BRANCH1 packages/apps/Trebuchet
-#switch_branches $BRANCH1 packages/modules/Connectivity
 switch_branches $BRANCH1 packages/modules/DnsResolver
-#switch_branches $BRANCH1 packages/modules/NetworkStack
 switch_branches $BRANCH1 packages/modules/Permission
 switch_branches $BRANCH1 packages/modules/Wifi
+switch_branches $BRANCH1 packages/providers/ContactsProvider
 switch_branches $BRANCH1 packages/providers/MediaProvider
+switch_branches $BRANCH1 packages/services/Telephony
 switch_branches $BRANCH1 system/core
 switch_branches $BRANCH1 system/sepolicy
 switch_branches $BRANCH1 vendor/lineage
-#switch_branches $BRANCH1 .repo/local_manifests
+switch_branches $BRANCH1 .repo/local_manifests
 #switch_branches $BRANCH2 OTA
 
 switch_zpatch $BRANCH1 $PATCHV
