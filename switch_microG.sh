@@ -52,16 +52,19 @@ case "$1" in
   microG)
     BRANCH1="lin-20.0-microG"
     BRANCH2="lin-20.0-microG"
+    BRANCH3="lin-20.0-microG"
     PATCHV="S"
     ;;
   default)
     BRANCH1="lineage-20.0"
     BRANCH2="lineage-20.0"
+    BRANCH3="lin-20.0-tz"
     PATCHV="S"
     ;;
   reference)
     BRANCH1="lineage-20.0"
     BRANCH2="changelog"
+    BRANCH3="lineage-20.0"
     PATCHV="N"
     ;;
   *)
@@ -81,7 +84,7 @@ switch_branches $BRANCH1 build/make
 switch_branches $BRANCH1 build/soong
 switch_branches $BRANCH1 frameworks/base
 switch_branches $BRANCH1 frameworks/native
-switch_branches $BRANCH1 libcore
+switch_branches $BRANCH3 libcore
 switch_branches $BRANCH1 packages/apps/Contacts
 switch_branches $BRANCH1 packages/apps/DocumentsUI
 switch_branches $BRANCH1 packages/apps/Jelly
